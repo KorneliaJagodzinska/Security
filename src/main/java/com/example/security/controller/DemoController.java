@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class DemoController {
 
+    @GetMapping("/")
+    public String getMainPage(){
+        return "main_page";
+    }
+
     @Secured("ROLE_ADMIN")
 //    @PreAuthorize("hasRole('ADMIN') AND hasRole('USER')")
     @GetMapping("/admin")
